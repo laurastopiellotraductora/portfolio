@@ -2,7 +2,10 @@
 title: Your Name - Translator Portfolio
 description: Professional translator specializing in [your languages]
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://yourusername.github.io" # Replace with your GitHub Pages URL
+# Replace with your GitHub Pages URL:
+# - For user site (repo named username.github.io): https://yourusername.github.io
+# - For project site: https://yourusername.github.io/repository-name
+url: "https://laurastopiellotraductora.github.io/portfolio/" # Get this from Settings > Pages in your GitHub repo
 
 # User settings
 username: Your Name
