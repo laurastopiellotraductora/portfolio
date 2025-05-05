@@ -1,0 +1,163 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+#particles-js {
+    background: #2c3e50;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.site-title {
+    font-size: 3em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.site-description {
+    font-size: 1.5em;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.header-icons {
+    margin: 20px 0;
+}
+
+.header-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.header-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.header-links a:hover {
+    background: white;
+    color: #2c3e50;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+}
+
+.user-details {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.tech {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Projects */
+.user-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.images-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contents {
+    flex: 2;
+    min-width: 300px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Portfolio */
+.portfolio-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 15px;
+    margin: 5px;
+    font-size: 0.9em;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 2em;
+    }
+    
+    .site-description {
+        font-size: 1.2em;
+    }
+    
+    .user-projects {
+        flex-direction: column;
+    }
+}

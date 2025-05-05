@@ -1,0 +1,34 @@
+# Site settings
+title: Your Name - Translator Portfolio
+description: Professional translator specializing in [your languages]
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://yourusername.github.io" # Replace with your GitHub Pages URL
+
+# User settings
+username: Your Name
+user_description: Professional Translator
+user_title: Translator
+email: your.email@example.com
+twitter_username: your_twitter
+github_username: your_github
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  portfolio:
+    output: true
+
+# Default front matter
+defaults:
+  -
+    scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: "portfolio" 

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="portfolio-content">
+  <h1>{{ page.title }}</h1>
+  
+  {% if page.image %}
+  <img src="{{ page.image | prepend: site.baseurl }}" alt="{{ page.title }}" class="project-image">
+  {% endif %}
+  
+  <div class="skills">
+    {% for skill in page.skills %}
+    <span class="skill-tag">{{ skill }}</span>
+    {% endfor %}
+  </div>
+  
+  {{ content }}
+</div> 

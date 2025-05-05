@@ -1,50 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translator Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Professional Translator</p>
-    </header>
+---
+layout: home
+---
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Write a brief introduction about yourself and your translation expertise here.</p>
-        </section>
+<div id="particles-js">
+  <div class="header">
+      <h1>
+        <span class="site-title">{{site.username}}</span>
+        <span class="site-description">{{site.user_description}}</span>
+      </h1>
+      <div class="header-icons">
+        {% if site.email %}
+        <a aria-label="Send email" href="mailto:{{site.email}}"><i class="icon fa fa-envelope"></i></a>
+        {% endif %}
+        {% if site.twitter_username %}
+        <a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+        {% endif %}
+        {% if site.github_username %}
+        <a aria-label="My Github" target="_blank" href="https://github.com/{{site.github_username}}"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
+        {% endif %}
+      </div>
+      <div class="header-links">
+        <a class="link" href="#about" data-scroll>About Me</a>
+        <a class="link" href="#projects" data-scroll>My Work</a>
+      </div>
+  </div>
+  <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+</div>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Language Pairs</li>
-                <li>Specialized Fields</li>
-                <li>Translation Tools</li>
-            </ul>
-        </section>
+<section id="about">
+  <div class="user-details">
+    <h1> About Me </h1>
+    <p> {{site.user_description}} </p>
+  </div>
+  <div class="user">
+    <div class="tech">
+      <h2>Languages</h2>
+      <i class="devicon-html5-plain colored"></i>
+      <i class="devicon-bootstrap-plain colored"></i>
+      <i class="devicon-sass-original colored"></i>
+      <p>List your source and target languages here</p>
+    </div>
+    <div class="tech">
+      <h2>Specializations</h2>
+      <i class="devicon-javascript-plain colored"></i>
+      <i class="devicon-react-original colored"></i>
+      <i class="devicon-nodejs-plain colored"></i>
+      <p>List your translation specializations here</p>
+    </div>
+    <div class="tech">
+      <h2>Tools</h2>
+      <i class="devicon-git-plain colored"></i>
+      <i class="devicon-gulp-plain colored"></i>
+      <i class="devicon-atom-original colored"></i>
+      <p>List your CAT tools and other translation software here</p>
+    </div>
+  </div>
+</section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Job Title</h3>
-                <p>Company Name - Year</p>
-                <p>Description of your role and achievements</p>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>LinkedIn: linkedin.com/in/yourprofile</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
-</body>
-</html> 
+<section id="projects">
+  <div class="user-details">
+    <h1> Featured Projects </h1>
+  </div>
+  {% for project in site.portfolio %}
+    <div class="user-projects">
+      <div class="images-right">
+        <img alt="project image" src="{{ project.image | prepend: site.baseurl }}" />
+      </div>
+      <div class="contents">
+        <h3> {{ project.title }} </h3>
+        <ul>
+          {% for skill in project.skills %}
+          <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+        <p>{{ project.description }}</p>
+        <a class="project-link" href="{{ project.url | prepend: site.baseurl }}">Check it out</a>
+      </div>
+    </div>
+  {% endfor %}
+</section> 
